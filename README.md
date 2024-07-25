@@ -8,10 +8,13 @@ This repository is structured to cover a wide range of algorithm types and data 
 
 ### Current Categories
 
-- **Sorting Algorithms**
+- **Sorting**
     - [Insertion Sort](/sorting/insertion_sort/)
     - [Merge Sort](/sorting/merge_sort/)
     - [Insertion Sort vs Merge Sort](/sorting/insertion_vs_merge_sort/)
+
+- **Sets**
+    - [Stacks](/sets/stacks/)
 
 ## Getting Started
 
