@@ -15,6 +15,7 @@ This repository is structured to cover a wide range of algorithm types and data 
 
 - **Sets**
     - [Stacks](/sets/stacks/)
+    - [Queues](/sets/queues/)
 
 ## Getting Started
 
