@@ -14,6 +14,7 @@ This repository is structured to cover a wide range of algorithm types and data 
     - [Insertion Sort vs Merge Sort](/sorting/insertion_vs_merge_sort/)
 
 - **Sets**
+    - [Arrays](/sets/arrays/)
     - [Stacks](/sets/stacks/)
     - [Queues](/sets/queues/)
 
