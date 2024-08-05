@@ -1,7 +1,9 @@
 package arrays
 
+import "sort"
+
 // Time complexity: O(n^2) | Space complexity: O(1)
-func TwoNumberSum(array []int, target int) []int {
+func TwoNumberSumUsingBruteForce(array []int, target int) []int {
 	counter := 0
 
 	if len(array) > 1 {
@@ -22,7 +24,7 @@ func TwoNumberSum(array []int, target int) []int {
 }
 
 // Time complexity: O(n) | Space complexity: O(n)
-func OptimizedTwoNumberSum(array []int, target int) []int {
+func TwoNumberSumUsingHashing(array []int, target int) []int {
 	results := make(map[int]bool)
 
 	for _, num := range array {
@@ -34,6 +36,32 @@ func OptimizedTwoNumberSum(array []int, target int) []int {
 
 		results[potentialMatch] = true
 
+	}
+
+	return []int{}
+}
+
+// Time complexity: O(n log n) | Space complexity: O(1)
+func TwoNumberSumUsingSortingAndTwoPointers(array []int, target int) []int {
+	sort.Ints(array)
+
+	left := 0
+	right := len(array) - 1
+
+	if len(array) > 1 {
+		for array[left]+array[right] != target {
+			if array[left] != array[right] {
+				if array[left]+array[right] < target {
+					left++
+				} else {
+					right--
+				}
+			} else {
+				return []int{}
+			}
+		}
+
+		return []int{array[left], array[right]}
 	}
 
 	return []int{}

@@ -5,19 +5,27 @@ import (
 )
 
 // Benchmark function for TwoNumberSum
-func BenchmarkTwoNumberSum(b *testing.B) {
+func BenchmarkTwoNumberSumUsingBruteForce(b *testing.B) {
 	array := []int{3, 5, -4, 8, 11, 1, -1, 6}
 	target := 10
 	for i := 0; i < b.N; i++ {
-		TwoNumberSum(array, target)
+		TwoNumberSumUsingBruteForce(array, target)
 	}
 }
 
 // Benchmark function for TwoNumberSumOptimized
-func BenchmarkTwoNumberSumOptimized(b *testing.B) {
+func BenchmarkTwoNumberSumUsingHashing(b *testing.B) {
 	array := []int{3, 5, -4, 8, 11, 1, -1, 6}
 	target := 10
 	for i := 0; i < b.N; i++ {
-		OptimizedTwoNumberSum(array, target)
+		TwoNumberSumUsingHashing(array, target)
+	}
+}
+
+func BenchmarkTwoNumberSumUsingSortingAndTwoPointers(b *testing.B) {
+	array := []int{3, 5, -4, 8, 11, 1, -1, 6}
+	target := 10
+	for i := 0; i < b.N; i++ {
+		TwoNumberSumUsingSortingAndTwoPointers(array, target)
 	}
 }
