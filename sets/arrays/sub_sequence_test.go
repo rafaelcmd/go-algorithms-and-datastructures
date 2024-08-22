@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-// Benchmark function for TwoNumberSum
+// Benchmark function for SubSequence
 func BenchmarkSubSequence(b *testing.B) {
 	array := []int{5, 1, 22, 25, 6, -1, 8, 10}
 	sequence := []int{1, 6, -1, 10}
@@ -13,7 +13,7 @@ func BenchmarkSubSequence(b *testing.B) {
 	}
 }
 
-// Benchmark function for TwoNumberSumOptimized
+// Benchmark function for IsValidSubsequence
 func BenchmarkIsValidSubsequence(b *testing.B) {
 	array := []int{5, 1, 22, 25, 6, -1, 8, 10}
 	sequence := []int{1, 6, -1, 10}

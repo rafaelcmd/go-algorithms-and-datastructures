@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-// Benchmark function for TwoNumberSum
+// Benchmark function for TwoNumberSumUsingBruteForce
 func BenchmarkTwoNumberSumUsingBruteForce(b *testing.B) {
 	array := []int{3, 5, -4, 8, 11, 1, -1, 6}
 	target := 10
@@ -13,7 +13,7 @@ func BenchmarkTwoNumberSumUsingBruteForce(b *testing.B) {
 	}
 }
 
-// Benchmark function for TwoNumberSumOptimized
+// Benchmark function for TwoNumberSumUsingHashing
 func BenchmarkTwoNumberSumUsingHashing(b *testing.B) {
 	array := []int{3, 5, -4, 8, 11, 1, -1, 6}
 	target := 10
@@ -22,6 +22,7 @@ func BenchmarkTwoNumberSumUsingHashing(b *testing.B) {
 	}
 }
 
+// Benchmark function for TwoNumberSumUsingSortingAndTwoPointers
 func BenchmarkTwoNumberSumUsingSortingAndTwoPointers(b *testing.B) {
 	array := []int{3, 5, -4, 8, 11, 1, -1, 6}
 	target := 10
