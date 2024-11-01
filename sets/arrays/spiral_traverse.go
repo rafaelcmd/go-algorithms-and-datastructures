@@ -40,7 +40,7 @@ func SpiralTraverse(array [][]int) []int {
 // Time: O(n) | Space: O(n)
 func SpiralTraverseImproved(array [][]int) []int {
 	rows, cols := len(array), len(array[0])
-	result := make([]int, 0, rows*cols) // Preallocate capacity
+	result := make([]int, 0, rows*cols)
 
 	top, bottom := 0, rows-1
 	left, right := 0, cols-1
@@ -72,4 +72,47 @@ func SpiralTraverseImproved(array [][]int) []int {
 	}
 
 	return result
+}
+
+// Time: O(n) | Space: O(n)
+func SpiralTraverseWithRecursion(array [][]int) []int {
+	rows, cols := len(array), len(array[0])
+	result := make([]int, 0, rows*cols)
+
+	top, bottom := 0, rows-1
+	left, right := 0, cols-1
+
+	return recursiveSpiralTraverse(array, result, top, bottom, left, right)
+}
+
+func recursiveSpiralTraverse(array [][]int, result []int, top, bottom, left, right int) []int {
+	if top > bottom || left > right {
+		return result
+	}
+
+	for i := left; i <= right; i++ {
+		result = append(result, array[top][i])
+	}
+	top++
+
+	for i := top; i <= bottom; i++ {
+		result = append(result, array[i][right])
+	}
+	right--
+
+	if top <= bottom {
+		for i := right; i >= left; i-- {
+			result = append(result, array[bottom][i])
+		}
+		bottom--
+	}
+
+	if left <= right {
+		for i := bottom; i >= top; i-- {
+			result = append(result, array[i][left])
+		}
+		left++
+	}
+
+	return recursiveSpiralTraverse(array, result, top, bottom, left, right)
 }
