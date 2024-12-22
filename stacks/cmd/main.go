@@ -1,6 +1,8 @@
 package main
 
-import "github.com/rafaelcmd/go-algorithms-and-datastructures/sets/stacks"
+import (
+	"github.com/rafaelcmd/go-algorithms-and-datastructures/stacks"
+)
 
 func main() {
 	var stack = stacks.NewStack()

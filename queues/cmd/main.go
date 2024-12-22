@@ -1,6 +1,8 @@
 package main
 
-import "github.com/rafaelcmd/go-algorithms-and-datastructures/sets/queues"
+import (
+	"github.com/rafaelcmd/go-algorithms-and-datastructures/queues"
+)
 
 func main() {
 	queue := queues.NewQueue()
